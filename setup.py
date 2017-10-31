@@ -9,9 +9,9 @@ import fastentrypoints
 
 
 # Package meta-data.
-NAME = 'pyprof'
+NAME = 'profy'
 DESCRIPTION = 'quickly profile Python scripts or entry-scripts with cProfile and snakeviz'
-URL = 'https://github.com/MichaelGrupp/pyprof'
+URL = 'https://github.com/MichaelGrupp/profy'
 EMAIL = 'michael.grupp@tum.de'
 AUTHOR = 'Michael Grupp'
 
@@ -23,14 +23,14 @@ REQUIRED = [
 # Where the magic happens:
 setup(
     name=NAME,
-    version=0.1,
+    version="0.1.1",
     description=DESCRIPTION,
     author=AUTHOR,
     author_email=EMAIL,
     url=URL,
-    packages=['pyprof'],
+    packages=['profy'],
     entry_points={
-         'console_scripts': ['pyprof=pyprof.pyprof:main'],
+         'console_scripts': ['profy=profy.profy:main'],
     },
     install_requires=REQUIRED,
 )
