@@ -17,7 +17,7 @@ profy doesn't do much, but it saves some time if you want to quickly profile a P
 Instead of:
 
 ```
-python -m cProfile my_script.py --some_option -o out.prof
+python -m cProfile -o out.prof my_script.py --some_option
 snakeviz out.prof
 ```
 
