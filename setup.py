@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Note: To use the 'upload' functionality of this file, you must:
-#   $ pip install twine
-
 from setuptools import find_packages, setup, Command
+
+# monkey patch because setuptools entry_points are slow as fuck
+# https://github.com/ninjaaron/fast-entry_points
+import fastentrypoints
+
 
 # Package meta-data.
 NAME = 'pyprof'
 DESCRIPTION = 'quickly profile Python scripts or entry-scripts with cProfile and snakeviz'
-URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+URL = 'https://github.com/MichaelGrupp/pyprof'
+EMAIL = 'michael.grupp@tum.de'
+AUTHOR = 'Michael Grupp'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

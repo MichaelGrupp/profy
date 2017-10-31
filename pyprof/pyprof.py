@@ -21,8 +21,11 @@ def main():
     if full_path is not None:
         other_args[0] = full_path
 
-    sp.check_call(["python", "-m", "cProfile", "-o", args.out] + other_args)
-    sp.check_call(["snakeviz", args.out])
+    try:
+        sp.check_call(["python", "-m", "cProfile", "-o", args.out] + other_args)
+        sp.call(["snakeviz", args.out])
+    except KeyboardInterrupt:
+        pass
 
 
 if __name__ == "__main__":
