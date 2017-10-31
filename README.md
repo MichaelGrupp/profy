@@ -9,6 +9,7 @@
 ```
 pip install profy
 ```
+(installs profy and snakeviz)
 
 ## Overview
 
