@@ -23,7 +23,7 @@ REQUIRED = [
 # Where the magic happens:
 setup(
     name=NAME,
-    version="0.1.2",
+    version="0.1.3",
     description=DESCRIPTION,
     author=AUTHOR,
     author_email=EMAIL,

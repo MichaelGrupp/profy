@@ -3,8 +3,10 @@
 
 # author: Michael Grupp (github.com/MichaelGrupp/profy)
 
+import os
 import sys
 import argparse
+import tempfile
 import subprocess as sp
 from distutils.spawn import find_executable
 
@@ -23,7 +25,7 @@ cmd_args        any (optional) command line arguments for cmd
 
 Options:
 --profy_help    show this help message and exit
---profy_out     path to save the .prof file (default: out.prof)
+--profy_out     path to save the .prof file (default: out.prof in tmp folder)
 '''
 
 
@@ -34,7 +36,8 @@ def main():
         usage=help_msg,
         add_help=False
         )
-    parser.add_argument("--profy_out", default="out.prof")
+    tmp = tempfile.gettempdir()
+    parser.add_argument("--profy_out", default=os.path.join(tmp, "out.prof"))
     parser.add_argument("--profy_help", action="store_true")
     args, other_args = parser.parse_known_args()
 
